@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".Participant.ParticipantViewTaskActivity">
+	<include
+		layout="@layout/post_toolbar_layout"
+		android:id="@+id/toolbar" />
+	
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_margin="16dp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/title"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/toolbar">
+		
+		<TextView
+			android:id="@+id/aname"
+			style="@style/TextAppearance.Material3.TitleLarge"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Author Name"
+			android:textColor="@color/Primary"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+		
+		<TextView
+			android:id="@+id/deadline"
+			style="@style/TextAppearance.Material3.LabelLarge"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Deadline: "
+			android:textColor="@color/Primary"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/aname" />
+		
+		<TextView
+			android:id="@+id/date"
+			style="@style/TextAppearance.Material3.LabelLarge"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="date"
+			android:textColor="@color/Secondary"
+			app:layout_constraintBottom_toBottomOf="@+id/aname"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toTopOf="@+id/aname" />
+	</androidx.constraintlayout.widget.ConstraintLayout>
+	
+	
+	<ScrollView
+		android:layout_marginHorizontal="16dp"
+		android:id="@+id/scrollView2"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_marginTop="16dp"
+		android:layout_marginBottom="16dp"
+		app:layout_constraintBottom_toTopOf="@id/hashtags"
+		app:layout_constraintTop_toBottomOf="@id/title">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+			<TextView
+				android:id="@+id/body2"
+				android:visibility="visible"
+				style="@style/TextAppearance.Material3.BodyLarge"
+				android:layout_width="match_parent"
+				android:layout_height="250dp"
+				android:autoLink="web"
+				android:gravity="top"
+				android:text="Body" />
+			<com.google.android.material.divider.MaterialDivider
+				android:layout_width="match_parent"
+				android:layout_height="2dp"
+				android:layout_marginBottom="16dp"/>
+			
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/submissionsRecyclerView"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" />
+			
+			<Button
+				android:id="@+id/submitTaskBtn"
+				android:visibility="gone"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Submit Task"
+				style="@style/Widget.Material3.Button.OutlinedButton" />
+		</LinearLayout>
+	
+	</ScrollView>
+	
+	
+	<TextView
+		style="@style/TextAppearance.Material3.TitleSmall"
+		android:id="@+id/hashtags"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:layout_marginBottom="16dp"
+		android:textColor="@color/Secondary"
+		android:text="#SCCI\n#SEEK_THE_PEAK"
+		app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

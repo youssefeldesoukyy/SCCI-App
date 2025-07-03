@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.MaterialToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	app:title="Announcement"
+	app:menu="@menu/post_toolbar_menu"
+	android:layout_height="wrap_content">
+
+</com.google.android.material.appbar.MaterialToolbar>

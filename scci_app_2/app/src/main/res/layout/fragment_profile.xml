@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".ProfileFragment">
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/fullNameLayout"
+			android:layout_width="300dp"
+			android:layout_height="wrap_content"
+			android:background="@drawable/rectangle_edit_drawable"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintVertical_bias="0.25">
+			
+			<TextView
+				android:id="@+id/fullNameTextView"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_margin="16dp"
+				android:ellipsize="end"
+				android:maxWidth="220dp"
+				android:maxLines="1"
+				android:text="Mahmoud Nael"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+			
+			<com.google.android.material.divider.MaterialDivider
+				android:id="@+id/materialDivider2"
+				android:layout_width="2dp"
+				android:layout_height="24dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toStartOf="@id/editFullNameBtn"
+				app:layout_constraintTop_toTopOf="parent" />
+			
+			<Button
+				android:id="@+id/editFullNameBtn"
+				style="@style/Widget.Material3.Button.IconButton"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				
+				app:icon="@drawable/outline_edit_24"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+		</androidx.constraintlayout.widget.ConstraintLayout>
+		
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/constraintLayout"
+			android:layout_width="300dp"
+			android:layout_height="wrap_content"
+			android:layout_marginVertical="32dp"
+			android:background="@drawable/rectangle_edit_drawable"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/fullNameLayout">
+			
+			<TextView
+				android:id="@+id/emailTextView"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_margin="16dp"
+				android:ellipsize="end"
+				android:maxWidth="220dp"
+				android:maxLines="1"
+				android:text="mahmoudmnael@gmail.com"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+			
+			<com.google.android.material.divider.MaterialDivider
+				android:id="@+id/materialDivider"
+				android:layout_width="2dp"
+				android:layout_height="24dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toStartOf="@id/editMailBtn"
+				app:layout_constraintTop_toTopOf="parent" />
+			
+			<Button
+				android:id="@+id/editMailBtn"
+				style="@style/Widget.Material3.Button.IconButton"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				
+				app:icon="@drawable/outline_edit_24"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+		</androidx.constraintlayout.widget.ConstraintLayout>
+		
+		<Button
+			android:id="@+id/changePasswordBtn"
+			style="@style/Widget.Material3.Button.TextButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Change Password"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			android:layout_marginTop="64dp"
+			app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+		
+	</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
